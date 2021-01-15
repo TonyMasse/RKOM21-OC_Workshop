@@ -9,4 +9,5 @@ cd etherpad-lite
 wget https://raw.githubusercontent.com/TonyMasse/RKOM21-OC_Workshop/main/config/settings.json
 npm install ep_hash_auth bcrypt argon2
 npm install adminpads2 author_hover message_all pad_activity_nofication_in_title padlist2 show_whitespace
+sudo iptables -L -n | grep 9001
 bin/run.sh
