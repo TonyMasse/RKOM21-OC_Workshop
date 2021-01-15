@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 sudo -E iptables -I INPUT -p tcp --dport 9001 -j ACCEPT
+sudo -E iptables-save > /etc/sysconfig/iptables
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
 sudo -E yum install -y nodejs wget
 git clone --branch master https://github.com/ether/etherpad-lite.git
