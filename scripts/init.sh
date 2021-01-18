@@ -41,7 +41,10 @@ npm install adminpads2 author_hover message_all pad_activity_nofication_in_title
 sudo iptables -L -n | grep 9001
 echo -e "\e[92mRun \e[1metherpad"
 export NODE_ENV=production
-bin/run.sh &
+bin/run.sh
+
+exit
+
 sleep 5
 
 
