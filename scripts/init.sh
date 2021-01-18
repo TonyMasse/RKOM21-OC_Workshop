@@ -50,7 +50,8 @@ for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; ech
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Preparing \e[1mOpen Collector\e[39m\e[25m"
 
-curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/init_oc.sh | sudo -E -u logrhythm bash -
+curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/init_oc.sh -o /tmp/init_oc.sh
+sudo -E -u logrhythm bash /tmp/init_oc.sh
 
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Run \e[1metherpad\e[39m\e[25m"
