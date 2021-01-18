@@ -16,6 +16,9 @@ sleep 5
 cd
 wget https://raw.githubusercontent.com/logrhythm/versions/master/lrctl
 chmod +x lrctl
-./lrctl init
-./lrctl metrics start
-./lrctl open-collector start
+sudo -E ./lrctl init
+sudo -E ./lrctl lrjq install
+sudo -E ./lrctl ocpipeline install
+sudo -E ./lrctl metrics start
+sudo -E ./lrctl status
+sudo -E ./lrctl open-collector start
