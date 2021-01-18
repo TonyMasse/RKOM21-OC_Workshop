@@ -46,6 +46,12 @@ npm install ep_hash_auth bcrypt argon2
 npm install adminpads2 author_hover message_all pad_activity_nofication_in_title padlist2 show_whitespace
 sudo iptables -L -n | grep 9001
 
+for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
+for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
+echo -e "\e[92m# Preparing \e[1mOpen Collector\e[39m\e[25m"
+
+curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/init_oc.sh | sudo -E -u logrhythm bash -
+
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Run \e[1metherpad\e[39m\e[25m"
 
