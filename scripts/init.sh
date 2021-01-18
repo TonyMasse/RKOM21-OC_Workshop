@@ -38,6 +38,7 @@ for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Get prepared configuration\e[39m"
 
 curl -sL https://raw.githubusercontent.com/TonyMasse/RKOM21-OC_Workshop/main/config/settings.json -o settings.json
+curl -sL https://raw.githubusercontent.com/TonyMasse/RKOM21-OC_Workshop/main/config/dirty.db.gz | gunzip - > var/dirty.db
 
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Install cryptographic and authentation modules for \e[1metherpad\e[39m\e[25m"
@@ -59,3 +60,6 @@ echo -e "\e[92m# Run \e[1metherpad\e[39m\e[25m"
 export NODE_ENV=production
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
 bin/run.sh
+
+# TO DO
+# - bring dirty.db
