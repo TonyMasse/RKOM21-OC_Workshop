@@ -1,9 +1,9 @@
 <template>
   <q-item
-    clickable
+    :clickable="link.length > 0"
     tag="a"
-    target="_blank"
-    :href="link"
+    :href="href"
+    :class="(sub ? 'q-ml-lg' : '')"
   >
     <q-item-section
       v-if="icon"
@@ -14,7 +14,7 @@
 
     <q-item-section>
       <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>
+      <q-item-label caption class="text-grey">
         {{ caption }}
       </q-item-label>
     </q-item-section>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'EssentialLink',
+  name: 'DrawLink',
   props: {
     title: {
       type: String,
@@ -37,12 +37,30 @@ export default {
 
     link: {
       type: String,
-      default: '#'
+      default: ''
     },
 
     icon: {
       type: String,
       default: ''
+    },
+
+    sub: {
+      type: Boolean,
+      default: false
+    },
+    baseLink: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    href () {
+      if (this.link.length) {
+        return this.baseLink + this.link
+      } else {
+        return '#'
+      }
     }
   }
 }

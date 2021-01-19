@@ -1,1 +1,39 @@
 // app global css in SCSS form
+.bg-lr_gradient {
+  background: rgb(0,173,156);
+  background: linear-gradient(90deg, rgba(0,173,156,1) 0%, rgba(0,124,194,1) 50%, rgba(121,1,100,1) 100%);
+}
+.bg-lr_draw {
+  background: rgb(0,48,95);
+}
+.a_style:link {
+    text-decoration: none;
+    color: #7474ff;
+}
+.a_style:visited {
+    text-decoration: none;
+    color: #9274ff;
+}
+.a_style:hover {
+    text-decoration: underline;
+    color: #7474ff;
+}
+.a_style:active {
+    text-decoration: underline;
+    color: #f36d33d0;
+}
+pre {
+    background: #101010;
+    border: 1px solid #303030;
+    border-left: 3px solid #f36d33d0;
+    color: grey;
+    page-break-inside: avoid;
+    font-family: monospace;
+    line-height: 1.6;
+    margin-bottom: 1.6rem;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0.5rem 1rem;
+    display: block;
+    word-wrap: break-word;
+}
