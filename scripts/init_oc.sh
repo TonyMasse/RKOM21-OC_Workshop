@@ -46,8 +46,8 @@ echo -e "\e[92m# Download log samples and setup dripping\e[39m"
 
 sudo -E mkdir /var/log/rkom21-lab
 sudo -E chmod 777 /var/log/rkom21-lab
-curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/sample/misnet.sample.gz | gunzip - > /var/log/rkom21-lab/misnet.sample
-curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/misnet.sample.drip.pl | perl -  >> /var/log/rkom21-lab/mistnet.log &
+curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/sample/mistnet.sample.gz | gunzip - > /var/log/rkom21-lab/mistnet.sample
+curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/mistnet.sample.drip.pl | perl -  /var/log/rkom21-lab/mistnet.sample >> /var/log/rkom21-lab/mistnet.log &
 
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m### Init OC script ### Done\e[39m"
