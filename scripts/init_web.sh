@@ -54,7 +54,7 @@ sudo -E chown centos /usr/share/nginx/html
 curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/web/rkom21/dist/spa.zip -o /tmp/spa.zip
 unzip /tmp/spa.zip -d /tmp/
 mv /tmp/spa/* /usr/share/nginx/html/
-
+ln -s /usr/share/nginx/html html
 
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
@@ -63,3 +63,9 @@ echo -e "\e[92m# Enable and Start \e[1mNginX \e[39m\e[25m"
 sudo -E systemctl enable --now nginx
 sudo -E systemctl status nginx -l
 
+for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
+for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
+echo -e "\e[92m# Re-do save the Firewall rules\e[39m"
+
+sudo -E iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+sudo -E bash -c 'iptables-save > /etc/sysconfig/iptables'
