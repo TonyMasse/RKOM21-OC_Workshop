@@ -15,11 +15,11 @@ echo -e "\e[94m# -----------"
 echo -e "\e[94m# (c) 2021 LogRhythm"
 echo -e "\e[94m# Tony Massé - tony.masse@logrhythm.com\e[39m"
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
-for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
-echo -e "\e[92m# Prepare and save the Firewall rules\e[39m"
-
-sudo -E iptables -I INPUT -p tcp --dport 9001 -j ACCEPT
-sudo -E bash -c 'iptables-save > /etc/sysconfig/iptables'
+#for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
+#echo -e "\e[92m# Prepare and save the Firewall rules\e[39m"
+#
+#sudo -E iptables -I INPUT -p tcp --dport 9001 -j ACCEPT
+#sudo -E bash -c 'iptables-save > /etc/sysconfig/iptables'
 
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done

@@ -1,7 +1,7 @@
 <template>
   <q-page class="bg-grey-10 text-grey-5">
     <!-- Solution Files: Filter -->
-    <iframe style="width: 100%; height: calc(100vh - 25px)" :src="editorUrl" frameborder="0"></iframe>
+    <iframe v-if="teamId" style="width: 100%; height: calc(100vh - 25px)" :src="editorUrl" frameborder="0"></iframe>
   </q-page>
 </template>
 
@@ -22,7 +22,9 @@ export default {
       return (teams.length ? teams[0] : {})
     },
     editorUrl () {
-      return this.currentTeam.editorBaseUrl + '/p/' + this.teamId + '_is_mistnet_SOLUTION.jq'
+      const url = this.currentTeam.editorBaseUrl + '/p/' + this.teamId + '_is_mistnet_SOLUTION.jq'
+      console.log('editorUrl => ' + url)
+      return url
     }
   },
   mounted () {

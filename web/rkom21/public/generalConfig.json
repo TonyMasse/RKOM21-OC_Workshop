@@ -3,28 +3,28 @@
     {
       "code": "A",
       "name": "AIE",
-      "editorBaseUrl": "http://RKOM21-oc.logrhythme3.com:9001",
+      "editorBaseUrl": "/collaborative.editor",
       "teamServer": "RKOM21-",
       "key": "*********-A"
     },
     {
       "code": "B",
       "name": "Beat",
-      "editorBaseUrl": "http://RKOM21-oc.logrhythme3.com:9001",
+      "editorBaseUrl": "/collaborative.editor",
       "teamServer": "RKOM-B-",
       "key": "*********-B"
     },
     {
       "code": "C",
       "name": "Case",
-      "editorBaseUrl": "http://RKOM21-oc.logrhythme3.com:9001",
+      "editorBaseUrl": "/collaborative.editor",
       "teamServer": "RKOM-C-",
       "key": "*********-C"
     },
     {
       "code": "D",
       "name": "DX",
-      "editorBaseUrl": "http://RKOM21-oc.logrhythme3.com:9001",
+      "editorBaseUrl": "/collaborative.editor",
       "teamServer": "RKOM-D-",
       "key": "*********-D"
     }

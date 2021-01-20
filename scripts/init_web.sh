@@ -21,6 +21,11 @@ echo -e "\e[92m# Prepare and save the Firewall rules\e[39m"
 sudo -E iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 sudo -E bash -c 'iptables-save > /etc/sysconfig/iptables'
 
+for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
+echo -e "\e[92m# Setup SELinux to allow internal connections begtween NGINX and Etherpad\e[39m"
+sudo -E setsebool -P httpd_can_network_connect 1
+sudo -E setsebool -P httpd_can_network_relay 1
+
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Update packages and add Yum Repo\e[39m"
@@ -41,8 +46,7 @@ for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; ech
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Get NGINX configuration\e[39m"
 
-# ########
-# /etc/nginx/default.d/*.conf
+sudo -E curl -sL https://raw.githubusercontent.com/TonyMasse/RKOM21-OC_Workshop/main/config/nginx_etherpad.conf -o /etc/nginx/default.d/nginx_etherpad.conf
 
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
