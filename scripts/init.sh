@@ -47,12 +47,13 @@ npm install ep_hash_auth ep_bcrypt ep_argon2
 npm install ep_adminpads2 ep_author_hover ep_message_all
 sudo iptables -L -n | grep 9001
 
-for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
-for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
-echo -e "\e[92m# Preparing \e[1mOpen Collector\e[39m\e[25m"
-
-curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/init_oc.sh -o /tmp/init_oc.sh
-sudo -E -u logrhythm bash /tmp/init_oc.sh
+#for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
+#for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
+#echo -e "\e[92m# Preparing \e[1mOpen Collector\e[39m\e[25m"
+#
+#curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/init_oc.sh -o /tmp/init_oc.sh
+#sudo -E -u logrhythm bash /tmp/init_oc.sh
+#rm -f /tmp/init_oc.sh
 
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Run \e[1metherpad\e[39m\e[25m"
@@ -61,3 +62,11 @@ export NODE_ENV=production
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
 nohup bin/run.sh &
 tail -f nohup.out &
+
+for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
+for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
+echo -e "\e[92m# Preparing \e[1mWeb Site\e[39m\e[25m"
+
+curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/init_web.sh -o /tmp/init_web.sh
+bash /tmp/init_web.sh
+rm -f /tmp/init_web.sh
