@@ -22,7 +22,7 @@ export default {
       return (teams.length ? teams[0] : {})
     },
     editorUrl () {
-      return this.currentTeam.editorBaseUrl + '/p/mistnet.jq'
+      return this.currentTeam.editorBaseUrl + '/p/' + this.teamId + '_mistnet.jq'
     }
   },
   mounted () {
