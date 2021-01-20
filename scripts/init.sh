@@ -60,8 +60,9 @@ echo -e "\e[92m# Run \e[1metherpad\e[39m\e[25m"
 
 export NODE_ENV=production
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
+touch nohup.out
 nohup bin/run.sh &
-tail -f nohup.out &
+#tail -f nohup.out &
 
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
