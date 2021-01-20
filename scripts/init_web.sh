@@ -45,6 +45,7 @@ sudo -E mkdir /usr/share/nginx/html
 sudo -E chown centos /usr/share/nginx/html
 curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/web/rkom21/dist/spa.zip -o /tmp/spa.zip
 unzip /tmp/spa.zip -d /tmp/
+rm -rf /usr/share/nginx/html/*
 mv /tmp/spa/* /usr/share/nginx/html/
 ln -s /usr/share/nginx/html html
 
