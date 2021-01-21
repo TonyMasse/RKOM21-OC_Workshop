@@ -84,6 +84,7 @@ const linksData = [
   },
   {
     title: 'Editor Admin',
+    caption: '// DANGER ZONE //',
     icon: 'settings',
     link: 'editor.admin'
   },
