@@ -77,6 +77,12 @@ const linksData = [
     link: 'all.teams.editors'
   },
   {
+    title: 'Message to all',
+    caption: 'Message all users in Editors',
+    icon: 'message',
+    link: 'editor.message.all'
+  },
+  {
     title: 'Editor Admin',
     icon: 'settings',
     link: 'editor.admin'

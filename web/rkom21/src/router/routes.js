@@ -34,6 +34,7 @@ const routes = [
       { path: '', component: () => import('pages/supervisor/landing.vue') },
       { path: 'all.teams.editors', component: () => import('pages/supervisor/all.teams.editors.vue') },
       { path: 'editor.admin', component: () => import('pages/supervisor/editor.admin.vue') },
+      { path: 'editor.message.all', component: () => import('pages/supervisor/editor.message.all.vue') },
       { path: 'editor.landing', component: () => import('pages/supervisor/editor.landing.vue') }
     ]
   },
