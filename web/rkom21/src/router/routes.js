@@ -29,9 +29,12 @@ const routes = [
 
   {
     path: '/supervisor/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/SupervisorLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/supervisor/all.teams.editors.vue') }
+      { path: '', component: () => import('pages/supervisor/landing.vue') },
+      { path: 'all.teams.editors', component: () => import('pages/supervisor/all.teams.editors.vue') },
+      { path: 'editor.admin', component: () => import('pages/supervisor/editor.admin.vue') },
+      { path: 'editor.landing', component: () => import('pages/supervisor/editor.landing.vue') }
     ]
   },
 
