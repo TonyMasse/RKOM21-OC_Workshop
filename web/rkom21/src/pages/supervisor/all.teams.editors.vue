@@ -6,10 +6,10 @@
           Team <span style="text-decoration: underline;">{{ team.name.substring(0, 1) }}</span>{{ team.name.substring(1) }}
         </div>
         <div class="bg-grey-8">
-          <iframe style="width: 100%; height: calc(50vh - 25px)" :src="team.editorBaseUrl + '/p/' + team.code + '_is_mistnet.jq'" frameborder="1"></iframe>
+          <iframe style="width: 100%; height: calc(50vh - 28px)" :src="team.editorBaseUrl + '/p/' + team.code + '_is_mistnet.jq'" frameborder="1"></iframe>
         </div>
         <div class="bg-grey-8">
-          <iframe style="width: 100%; height: calc(50vh - 25px)" :src="team.editorBaseUrl + '/p/' + team.code + '_mistnet.jq'" frameborder="1"></iframe>
+          <iframe style="width: 100%; height: calc(50vh - 28px)" :src="team.editorBaseUrl + '/p/' + team.code + '_mistnet.jq'" frameborder="1"></iframe>
         </div>
       </div>
     </div>
