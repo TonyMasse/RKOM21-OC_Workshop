@@ -44,7 +44,8 @@ for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Install cryptographic and authentation modules for \e[1metherpad\e[39m\e[25m"
 
 npm install ep_hash_auth bcrypt argon2
-npm install ep_adminpads2 ep_author_hover ep_message_all
+#npm install ep_adminpads2 ep_author_hover ep_message_all
+npm install ep_author_hover ep_message_all
 sudo iptables -L -n | grep 9001
 
 #for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
