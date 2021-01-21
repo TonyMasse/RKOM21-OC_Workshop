@@ -1,0 +1,46 @@
+<template>
+  <q-page class="bg-grey-10 text-grey-5">
+    <!-- <iframe style="width: 100%; height: calc(100vh - 25px)" :src="editorUrl" frameborder="0"></iframe>
+    <iframe style="width: 100%; height: calc(100vh - 25px)" :src="editorUrl" frameborder="0"></iframe> -->
+    <div class="column col-md-auto q-gutter-xs" v-for="team in teams" :key="team.code">
+      <div class="q-pa-sm">
+        A
+      </div>
+      <div class="q-pa-sm">
+        B
+      </div>
+    </div>
+  </q-page>
+</template>
+
+<script>
+import { mapState } from 'vuex'
+
+export default {
+  name: 'PageSupervisorAllTeamsEditors',
+  data () {
+    return {
+      teamId: ''
+    }
+  },
+  computed: {
+    ...mapState('generalConfig', ['teams']),
+    currentTeam () {
+      const teams = this.teams.filter(t => t.code === this.teamId)
+      return (teams.length ? teams[0] : {})
+    },
+    editorUrl () {
+      const url = this.currentTeam.editorBaseUrl + '/p/' + this.teamId + '_mistnet_SOLUTION.jq'
+      console.log('editorUrl => ' + url)
+      return url
+    }
+  },
+  mounted () {
+    if (typeof this.$route.params.teamId !== 'undefined') {
+      if (this.$route.params.teamId.length) {
+        this.teamId = this.$route.params.teamId
+      }
+    }
+  }
+}
+</script>
