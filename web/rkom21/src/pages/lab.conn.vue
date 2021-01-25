@@ -23,7 +23,7 @@
         <pre>centos@{{ currentTeam.teamServer }}OC.logrhythme3.com</pre> </li>
       <li> In <b>Connection</b> > <b>SSH</b> > <b>Auth</b>, point the "<b>Private key file for authentication</b>" to the PPK you just downloaded </li>
       <li> Hit <b>Open</b>, </li>
-      <li> once in, enter:
+      <li> Once in, enter:
         <pre>su - logrhythm</pre> </li>
     </ol>
     <div class="text-bold">
@@ -34,6 +34,8 @@
       <li> Download the SSH private key from here: <a class="a_style" target="_blank" href="https://logrhythm.sharepoint.com/:u:/s/Sales2/sales-engineering/EUZYascEQ1VDhz2FapldlCMBv-2zyX-nKQoVMGrcXDa4eA?e=Qfihp8">https://logrhythm.sharepoint.com/:u:/s/Sales2/sales-engineering/EUZYascEQ1VDhz2FapldlCMBv-2zyX-nKQoVMGrcXDa4eA?e=Qfihp8</a> </li>
       <li> Enter:
         <pre>ssh -i "PATH/TO/FILE" centos@{{ currentTeam.teamServer }}OC.logrhythme3.com</pre> </li>
+      <li> Once in, enter:
+        <pre>su - logrhythm</pre> </li>
     </ol>
 
     <div class="text-bold">
