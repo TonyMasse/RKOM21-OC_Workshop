@@ -30,9 +30,8 @@
     </div>
 
     <div class="text-h6 q-my-sm">
-      JQ Play
+      JQ Play - With log samples data and query/filter
     </div>
-    <a class="a_style" target="_blank" href="https://jqplay.org/">https://jqplay.org/</a>
     <div class="q-mt-sm">
       Below, some examples with the log format we are playing with today.<br>
       One single log (as sent by Filebeat).
