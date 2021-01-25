@@ -36,6 +36,9 @@ echo -e "\e[92m# Get NGINX configuration\e[39m"
 
 sudo -E curl -sL https://raw.githubusercontent.com/TonyMasse/RKOM21-OC_Workshop/main/config/nginx_etherpad.conf -o /etc/nginx/default.d/nginx_etherpad.conf
 
+sudo -E curl -sL https://raw.githubusercontent.com/TonyMasse/RKOM21-OC_Workshop/main/config/nginx_auth.conf -o /etc/nginx/default.d/nginx_auth.conf
+sudo -E echo 'rkom21:$apr1$9gKxdwNV$IbLXNfLju59O9pxPcEk1s0' > /usr/share/nginx/.htpasswd
+
 for i in {16..21} {21..16} ; do echo -en "\e[38;5;${i}m------\e[0m" ; done ; echo
 for i in {22,28,34,40} ; do echo -en "\e[38;5;${i}m#\e[0m" ; done
 echo -e "\e[92m# Get Website\e[39m"
