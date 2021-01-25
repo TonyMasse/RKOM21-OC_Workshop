@@ -1,7 +1,7 @@
 <template>
   <q-page class="bg-grey-10 text-grey-5 q-pa-md">
     <div class="text-h3 q-mb-sm">
-      OCPipeline Help
+      OCPipeline &amp; LRJQ Help
     </div>
     <div class="text-h6 q-my-sm">
       Online version:

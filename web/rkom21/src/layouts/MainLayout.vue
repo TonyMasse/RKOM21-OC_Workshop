@@ -78,7 +78,7 @@ const linksData = [
     link: 'mpe.fields'
   },
   {
-    title: 'OCPipeline Help',
+    title: 'OCPipeline & LRJQ Help',
     icon: 'description',
     link: 'ocpipeline.help'
   },
