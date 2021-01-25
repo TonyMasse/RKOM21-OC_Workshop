@@ -47,6 +47,7 @@ echo -e "\e[92m# Download log samples and setup dripping\e[39m"
 sudo -E mkdir /var/log/rkom21-lab
 sudo -E chmod 777 /var/log/rkom21-lab
 curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/sample/mistnet.sample.gz | gunzip - > /var/log/rkom21-lab/mistnet.sample
+mkdir /tmp/rkom21-lab
 mkdir /tmp/rkom21-lab/log_dripping
 cd /tmp/rkom21-lab/log_dripping/
 curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/mistnet.sample.drip.pl | nohup perl -  /var/log/rkom21-lab/mistnet.sample >> /var/log/rkom21-lab/mistnet.log &
