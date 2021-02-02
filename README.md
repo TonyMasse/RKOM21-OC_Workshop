@@ -10,7 +10,7 @@ curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/init.s
 
 Open Collector
 ```
-curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/init_oc.sh -o /tmp/init_oc.sh ; sudo -E -u logrhythm bash /tmp/init_oc.sh
+curl -sL https://github.com/TonyMasse/RKOM21-OC_Workshop/raw/main/scripts/init_oc.sh -o /tmp/init_oc.sh ; sudo -E -u logrhythm bash /tmp/init_oc.sh ; rm -f /tmp/init_oc.sh
 ```
 
 WEB
